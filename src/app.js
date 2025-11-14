@@ -6,9 +6,8 @@ import redirectRoute from '../routes/redirect.js'
 dotenv.config()
 const app = express()
 
-app.use(logger)
-app.use("/", redirectRoute)
-
+app.use(logger) // use logger 
+app.use("/", redirectRoute) // use routes 
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT)
